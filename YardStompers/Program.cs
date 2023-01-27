@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using YardStompers.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<YardStompersDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("YardStompers"));
+});
 
 var app = builder.Build();
 

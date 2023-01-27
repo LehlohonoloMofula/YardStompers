@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using YardStompers.Models;
 
 namespace YardStompers.Data
 {
@@ -6,6 +7,9 @@ namespace YardStompers.Data
     {
         public YardStompersDbContext(DbContextOptions<YardStompersDbContext> options) 
             :base(options) {  }
+
+
+        public DbSet<Category> Categories { get; set; }
     }
-    prop
+    
 }
