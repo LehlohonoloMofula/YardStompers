@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+using YardStompers.Models;
 namespace YardStompers.Models
 {
     public class Product
@@ -12,5 +12,11 @@ namespace YardStompers.Models
         public string Discription { get; set; }
         [Required]
         public double Price { get; set}
+        [Required]
+        public string image { get; set}
+        public virtual Category Category {get; set;}
+        public DateTime CreatedAt { get; set}
+        public DateTime? ModifiedAt { get; set}
+
     }
 }
