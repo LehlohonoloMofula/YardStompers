@@ -14,6 +14,7 @@ namespace YardStompers.Models
         public double Price { get; set}
         [Required]
         public string image { get; set}
+        
         public virtual Category Category {get; set;}
         public DateTime CreatedAt { get; set}
         public DateTime? ModifiedAt { get; set}
