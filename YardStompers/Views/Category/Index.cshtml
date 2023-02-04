@@ -25,8 +25,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach(var category in Model)
+                        {
+                            <tr width="50%">@category.Name</tr>
+                            <tr width="30%">@category.DisplayOrder</tr>
+                            <tr></tr>
+                            <tr></tr>
+                        }
                     </tbody>
                 </table>
+            }
+            else
+            {
+                <p> No Categories!</p>
             }
         </div>
   </div>
