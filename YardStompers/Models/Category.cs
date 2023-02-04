@@ -9,7 +9,7 @@ namespace YardStompers.Models
         [Required]
         public string Name { get; set; }
         public Guid DisplayOrder { get; set; }
-        public DateTime CreatedAt { get; set}
-        public DateTime? ModifiedAt { get; set}
+        public DateTime CreatedAt { get; set;}
+        public DateTime? ModifiedAt { get; set;}
     }
 }
