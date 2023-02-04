@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using YardStompers.Data;
+using YardStompers.Models;
 
 namespace YardStompers.Controllers
 {
@@ -13,7 +15,7 @@ namespace YardStompers.Controllers
     
         public IActionResult Index()
         {
-            IEnumerable<Category> category = _DbContext.Category;
+            IEnumerable<Category> category = _DbContext.Categories;
             return View(category );
         }
     }
