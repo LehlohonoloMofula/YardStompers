@@ -18,5 +18,10 @@ namespace YardStompers.Controllers
             IEnumerable<Category> category = _DbContext.Categories;
             return View(category );
         }
+        public IActionResult Create()
+        {
+            IEnumerable<Category> category = _DbContext.Categories;
+            return View(category );
+        }
     }
 }
