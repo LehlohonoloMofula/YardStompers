@@ -20,8 +20,16 @@ namespace YardStompers.Controllers
         }
         public IActionResult Create()
         {
-            
             return View();
         }
+ 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Category category)
+        {
+            _DbContext.Category.Add(category);
+            _DbContext.SaveChanges();
+            return RedirectToAction("Index");
+        } 
     }
 }
