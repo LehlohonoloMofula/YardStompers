@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using YardStompers.Data;
 
@@ -11,9 +12,11 @@ using YardStompers.Data;
 namespace YardStompers.Migrations
 {
     [DbContext(typeof(YardStompersDbContext))]
-    partial class YardStompersDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230205225143_applicationtypes")]
+    partial class applicationtypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
