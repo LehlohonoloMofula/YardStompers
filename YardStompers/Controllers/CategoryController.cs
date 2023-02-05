@@ -27,7 +27,8 @@ namespace YardStompers.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category category)
         {
-            _DbContext.Category.Add(category);
+            _DbContext.Categories.Add(category);
+            category.CreatedAt = DateTime.Now;
             _DbContext.SaveChanges();
             return RedirectToAction("Index");
         } 
