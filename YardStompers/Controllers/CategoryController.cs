@@ -45,10 +45,7 @@ namespace YardStompers.Controllers
 
         public IActionResult Delete(Guid Id)
         {
-            if(Id == null || Id == 0)
-            {
-                return NotFound();
-            }
+           
             var category = _DbContext.Categories.Find(Id);
             if(category == null)
             {
