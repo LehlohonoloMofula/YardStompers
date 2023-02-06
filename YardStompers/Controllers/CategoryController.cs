@@ -34,7 +34,7 @@ namespace YardStompers.Controllers
                 _DbContext.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return view(category);
+            return View(category);
         } 
     }
 }
