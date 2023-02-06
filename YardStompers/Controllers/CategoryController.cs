@@ -42,6 +42,19 @@ namespace YardStompers.Controllers
             IEnumerable<Category> category = _DbContext.Categories;
             return View(category );
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Category category)
+        {
+            if(ModelState.IsValid)
+            {
+                _DbContext.Categories.Update(category);
+                category.ModifiedAt = DateTime.Now;
+                _DbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(category);
+        } 
 
         public IActionResult Delete(Guid Id)
         {
