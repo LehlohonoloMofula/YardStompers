@@ -42,7 +42,7 @@ namespace YardStompers.Controllers
             IEnumerable<Category> category = _DbContext.Categories;
             return View(category );
         }
-        [HttpPost]
+        [HttpPut]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category category)
         {
