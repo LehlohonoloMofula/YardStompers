@@ -29,12 +29,12 @@ namespace YardStompers.Controllers
         {
             if(ModelState.IsValid)
             {
-
+                _DbContext.Categories.Add(category);
+                category.CreatedAt = DateTime.Now;
+                _DbContext.SaveChanges();
+                return RedirectToAction("Index");
             }
-            _DbContext.Categories.Add(category);
-            category.CreatedAt = DateTime.Now;
-            _DbContext.SaveChanges();
-            return RedirectToAction("Index");
+            return view(category);
         } 
     }
 }
