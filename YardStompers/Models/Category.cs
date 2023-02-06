@@ -9,8 +9,8 @@ namespace YardStompers.Models
         [Required]
         public string Name { get; set; }
         [Required]  
-        [Range(int.MinValue, int.MaxValue,ErrorMessage ="error")]
-        public int DisplayOrder { get; set; }
+        [Range(/*int.MinValue, int.MaxValue,ErrorMessage ="error"*/)]
+        public Guid DisplayOrder { get; set; }
         public DateTime CreatedAt { get; set;}
         public DateTime? ModifiedAt { get; set;}
     }

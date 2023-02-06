@@ -36,5 +36,25 @@ namespace YardStompers.Controllers
             }
             return View(category);
         } 
+
+        public IActionResult Edit(Guid Id)
+        {
+            IEnumerable<Category> category = _DbContext.Categories;
+            return View(category );
+        }
+
+        public IActionResult Delete(Guid Id)
+        {
+            if(Id == null || Id == 0)
+            {
+                return NotFound();
+            }
+            var category = _DbContext.Categories.Find(Id);
+            if(category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
     }
 }
