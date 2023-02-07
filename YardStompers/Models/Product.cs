@@ -11,6 +11,7 @@ namespace YardStompers.Models
         [Required]
         public string Discription { get; set; }
         [Required]
+        [Range(1, int.MaxValue)]
         public double Price { get; set;}
         [Required]
         public string image { get; set;}
