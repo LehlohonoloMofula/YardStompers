@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using YardStompers.Data;
+using YardStompers.Models;
 
 namespace YardStompers.Controllers
 {
